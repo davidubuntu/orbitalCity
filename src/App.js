@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { Transition, TransitionGroup } from "react-transition-group"
+import { play, exit } from "./timelines"
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./views/Home/Home"
+import Cities from "./views/Cities/Cities"
+import About from "./views/About/About"
+// import { library } from "@fortawesome/fontawesome-svg-core"
+// import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-function App() {
+// library.add(faTimes)
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
+        <Route
+          render={({ location }) => {
+            const { pathname, key } = location
+            return (
+              <TransitionGroup component={null}>
+                <Transition
+                  key={key}
+                  appear={true}
+                  onEnter={(node, appears) => play(pathname, node, appears)}
+                  onExit={(node, appears) => exit(node, appears)}
+                  timeout={{ enter: 750, exit: 150 }}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/cities" component={Cities} />
+                    <Route path="/about" component={About} />
+                  </Switch>
+                </Transition>
+              </TransitionGroup>
+            )
+          }}
+        />
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
