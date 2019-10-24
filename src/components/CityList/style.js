@@ -114,3 +114,8 @@ export const Items = styled.span`
   color: #7b7b7b;
   font-weight: 500;
 `
+
+export const CitiesListScroll = styled.div`
+  height: calc(100vh - 254px);
+  overflow: scroll;
+`

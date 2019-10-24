@@ -3,7 +3,8 @@ import {
   CityListSelectedContainer,
   TopDiv,
   ClearButton,
-  ItemsNumber
+  ItemsNumber,
+  CitiesListScroll
 } from "./style"
 import CityCard from "../CityCard/CityCard"
 
@@ -26,19 +27,21 @@ const CityListSelected = ({
           <ItemsNumber>{totalCitiesFiltered} items</ItemsNumber>
           <ClearButton onClick={clearList}>CLEAR</ClearButton>
         </TopDiv>
-        {cities.map(city => {
-          if (!city.checked) return <div key={city.id}></div>
-          return (
-            <CityCard
-              key={city.id}
-              id={city.id}
-              name={city.name}
-              chineseName={city.chineseName}
-              edition={true}
-              onDelete={deleteCard}
-            />
-          )
-        })}
+        <CitiesListScroll>
+          {cities.map(city => {
+            if (!city.checked) return <div key={city.id}></div>
+            return (
+              <CityCard
+                key={city.id}
+                id={city.id}
+                name={city.name}
+                chineseName={city.chineseName}
+                edition={true}
+                onDelete={deleteCard}
+              />
+            )
+          })}
+        </CitiesListScroll>
       </CityListSelectedContainer>
     </>
   )

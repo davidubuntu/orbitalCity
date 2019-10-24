@@ -36,7 +36,11 @@ export const Check = styled.input``
 
 export const ClearButton = styled.a``
 export const ItemsNumber = styled.span`
-  margin: 0px 65px;
+  margin: 0px 30px;
   color: #7b7b7b;
   font-weight: 500;
+`
+export const CitiesListScroll = styled.div`
+  height: calc(100vh - 178px);
+  overflow: scroll;
 `

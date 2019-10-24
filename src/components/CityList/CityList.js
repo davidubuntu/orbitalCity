@@ -6,7 +6,8 @@ import {
   Check,
   SearchCityInput,
   SearchContainer,
-  Items
+  Items,
+  CitiesListScroll
 } from "./style"
 import CityCard from "../CityCard/CityCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -49,16 +50,18 @@ const CityList = ({
           </label>
           <Items> {total}items</Items>
         </TotalDiv>
-        {cities.map(city => (
-          <CityCard
-            key={city.id}
-            id={city.id}
-            name={city.name}
-            chineseName={city.chineseName}
-            onHandleChange={handleSelection}
-            checked={city.checked}
-          />
-        ))}
+        <CitiesListScroll>
+          {cities.map(city => (
+            <CityCard
+              key={city.id}
+              id={city.id}
+              name={city.name}
+              chineseName={city.chineseName}
+              onHandleChange={handleSelection}
+              checked={city.checked}
+            />
+          ))}
+        </CitiesListScroll>
       </CityListContainer>
     </>
   )

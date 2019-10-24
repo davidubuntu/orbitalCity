@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const NavDiv = styled.div`
+
   @keyframes nav {
     from {
       opacity: 0;

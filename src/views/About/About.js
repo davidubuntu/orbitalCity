@@ -1,9 +1,9 @@
 import React from "react"
-
+import { Title } from "./style.js"
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <Title>About</Title>
       <div className="content">
         <div className="content--inner"></div>
       </div>
