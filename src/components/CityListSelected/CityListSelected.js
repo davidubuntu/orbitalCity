@@ -1,5 +1,10 @@
 import React from "react"
-import { CityListSelectedContainer, TopDiv, ClearButton } from "./style"
+import {
+  CityListSelectedContainer,
+  TopDiv,
+  ClearButton,
+  ItemsNumber
+} from "./style"
 import CityCard from "../CityCard/CityCard"
 
 const CityListSelected = ({
@@ -17,8 +22,8 @@ const CityListSelected = ({
   return (
     <>
       <CityListSelectedContainer>
-        <TopDiv>
-          <h3>{totalCitiesFiltered} items</h3>{" "}
+        <TopDiv className="padd">
+          <ItemsNumber>{totalCitiesFiltered} items</ItemsNumber>
           <ClearButton onClick={clearList}>CLEAR</ClearButton>
         </TopDiv>
         {cities.map(city => {

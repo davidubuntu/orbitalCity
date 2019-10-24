@@ -1,30 +1,25 @@
 import styled from "styled-components"
 
 export const CityListContainer = styled.div`
-  /* display: flex;
-  flex-wrap: wrap;
-  height: calc(100vh - 100px);
-  overflow-y: auto;
-  box-sizing: border-box;
-  width: 50%; */
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  border: 1px solid #e0e0e0;
   @media screen and (max-width: 1200px) {
     padding: 16px;
   }
 `
 export const TotalDiv = styled.div`
-  height: 60px;
-  width: 100%;
+  height: 40px;
   border: 1px solid #e0e0e0;
   display: flex;
   align-items: center;
-  padding: 1em;
   /* Checkbox styles */
   /* The container */
   .container {
     display: block;
     position: relative;
-    padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -50,7 +45,8 @@ export const TotalDiv = styled.div`
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    border: 2px solid #797979;
+    border-radius: 2px;
   }
 
   /* On mouse-over, add a grey background color */
@@ -61,6 +57,7 @@ export const TotalDiv = styled.div`
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
     background-color: #2196f3;
+    border: 2px solid #0099fb;
   }
 
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -89,10 +86,31 @@ export const TotalDiv = styled.div`
   }
 `
 export const FilterDiv = styled.div`
-  height: 60px;
-  width: 100%;
-  border: 1px solid #e0e0e0;
-  padding: 1em;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #e2e2e2;
 `
 
 export const Check = styled.input``
+export const SearchCityInput = styled.input`
+  :focus {
+    outline: none;
+  }
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid #6f6f6f;
+`
+export const SearchContainer = styled.div`
+  display: flex;
+  width: 100%;
+  .icon-search {
+    border-bottom: 1px solid #6f6f6f;
+  }
+`
+
+export const Items = styled.span`
+  margin: 0px 65px;
+  color: #7b7b7b;
+  font-weight: 500;
+`

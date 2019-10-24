@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import citiesService from "../../api/citiesService"
 import CityList from "../../components/CityList/CityList"
 import CityListSelected from "../../components/CityListSelected/CityListSelected"
-import { CitiesContainer } from "./style.js"
+import { CitiesContainer, Title } from "./style.js"
 
 const Cities = () => {
   const [cities, setCities] = useState([])
@@ -17,7 +17,6 @@ const Cities = () => {
   }, [])
 
   const checkAllTrue = checkAll => {
-    debugger
     const newCities = citiesService.cities.map(city => ({
       ...city,
       checked: checkAll
@@ -73,6 +72,7 @@ const Cities = () => {
     },
     0
   )
+  //Set all items with check true
   const clearSelectedList = () => {
     const newCities = cities.map(city => ({
       ...city,
@@ -82,7 +82,7 @@ const Cities = () => {
   }
   return (
     <div>
-      <h1>Cities of China</h1>
+      <Title>Cities of China</Title>
       <div className="content">
         <div className="content--inner">
           <CitiesContainer>

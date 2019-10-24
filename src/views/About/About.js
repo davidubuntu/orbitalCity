@@ -2,7 +2,7 @@ import React from "react"
 
 const About = () => {
   return (
-    <div className="view">
+    <div>
       <h1>About</h1>
       <div className="content">
         <div className="content--inner"></div>

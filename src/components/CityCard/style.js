@@ -2,16 +2,18 @@ import styled from "styled-components"
 
 export const CardContainer = styled.div`
   height: 100px;
-  width: 100%;
   display: flex;
   align-items: center;
-  padding: 1em;
   :hover {
-    background: #e0e0e0;
+    background: #efefef;
+  }
+  .icon-delete {
+    color: #6f6f6f;
+    font-size: 2em;
+    margin-left: auto;
   }
 
   /* Checkbox styles */
-  /* The container */
   .container {
     display: block;
     position: relative;
@@ -41,7 +43,8 @@ export const CardContainer = styled.div`
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    border: 2px solid #797979;
+    border-radius: 2px;
   }
 
   /* On mouse-over, add a grey background color */
@@ -52,6 +55,7 @@ export const CardContainer = styled.div`
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
     background-color: #2196f3;
+    border: 2px solid #0099fb;
   }
 
   /* Create the checkmark/indicator (hidden when not checked) */

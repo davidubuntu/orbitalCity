@@ -1,6 +1,16 @@
 import React from "react"
-import { CityListContainer, TotalDiv, FilterDiv, Check } from "./style"
+import {
+  CityListContainer,
+  TotalDiv,
+  FilterDiv,
+  Check,
+  SearchCityInput,
+  SearchContainer,
+  Items
+} from "./style"
 import CityCard from "../CityCard/CityCard"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const CityList = ({
   cities,
   total,
@@ -18,19 +28,26 @@ const CityList = ({
   const changeCity = e => {
     searchCity(e.target.value)
   }
-  //   {cities.filter(city =>city.name.includes(value) map(city => (
+
   return (
     <>
       <CityListContainer>
-        <FilterDiv>
-          <input type="text" onChange={changeCity} />
+        <FilterDiv className="padd">
+          <SearchContainer>
+            <FontAwesomeIcon className="icon-search" icon="search" />
+            <SearchCityInput
+              placeholder="Search by Name"
+              type="text"
+              onChange={changeCity}
+            />
+          </SearchContainer>
         </FilterDiv>
-        <TotalDiv>
+        <TotalDiv className="padd">
           <label className="container">
             <Check type="checkbox" onChange={handleTotalChange} />
             <span className="checkmark"></span>
           </label>
-          <h4> {total}items</h4>
+          <Items> {total}items</Items>
         </TotalDiv>
         {cities.map(city => (
           <CityCard

@@ -7,7 +7,7 @@ import {
   CardContainer,
   NamesDiv
 } from "./style"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const CityCard = ({
   id,
   name,
@@ -26,7 +26,7 @@ const CityCard = ({
   }
 
   return (
-    <CardContainer>
+    <CardContainer className="padd">
       {!edition && (
         <label className="container">
           <Check
@@ -45,7 +45,13 @@ const CityCard = ({
         <Name>{name}</Name>
         <ChineseName>{chineseName}</ChineseName>
       </NamesDiv>
-      {edition && <input type="button" value="X" onClick={deleteCard} />}
+      {edition && (
+        <FontAwesomeIcon
+          className="icon-delete"
+          icon="times"
+          onClick={deleteCard}
+        />
+      )}
     </CardContainer>
   )
 }
