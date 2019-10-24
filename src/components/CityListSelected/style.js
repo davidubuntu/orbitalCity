@@ -6,6 +6,13 @@ export const CityListSelectedContainer = styled.div`
     padding: 16px;
   }
 `
+export const TopDiv = styled.div`
+  display: flex;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 1em;
+`
 export const TotalDiv = styled.div`
   height: 80px;
   width: 100%;
@@ -94,3 +101,5 @@ export const Title = styled.h4`
 `
 
 export const Check = styled.input``
+
+export const ClearButton = styled.a``

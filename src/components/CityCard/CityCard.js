@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import {
   Check,
   Image,
@@ -12,27 +12,16 @@ const CityCard = ({
   id,
   name,
   chineseName,
-  allSelected,
   onHandleChange,
   edition,
-  onDelete
+  onDelete,
+  checked
 }) => {
-  const [selected, setSelected] = useState(false)
   const handleChange = e => {
-    onHandleChange(id, !selected)
-    setSelected(!selected)
+    onHandleChange(id, !checked)
   }
 
-  useEffect(() => {
-    // if (allSelected) {
-    //   document.querySelector(`#${id}`).click()
-    //   setSelected(true)
-    // } else {
-    //   document.querySelector(`#${id}`).checked = false
-    //   document.querySelector(`#${id}`).value = false
-    // }
-  }, [allSelected])
-  const deleteCard = () => {
+  const deleteCard = e => {
     onDelete(id)
   }
 
@@ -44,8 +33,9 @@ const CityCard = ({
             id={id}
             type="checkbox"
             className="input-card"
-            value={selected}
+            value={checked}
             onChange={handleChange}
+            checked={checked}
           />
           <span className="checkmark"></span>
         </label>

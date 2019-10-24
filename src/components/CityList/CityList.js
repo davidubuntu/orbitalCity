@@ -1,26 +1,33 @@
-import React, { useState } from "react"
+import React from "react"
 import { CityListContainer, TotalDiv, FilterDiv, Check } from "./style"
 import CityCard from "../CityCard/CityCard"
-const CityList = ({ cities, total, handleChangeSelection }) => {
-  const [allSelected, setAllSelected] = useState(false)
-  const handleChange = e => {
-    setAllSelected(!allSelected)
+const CityList = ({
+  cities,
+  total,
+  handleChangeSelection,
+  selectAll,
+  searchCity
+}) => {
+  const handleTotalChange = e => {
+    const checked = e.target.checked
+    selectAll(checked)
   }
   const handleSelection = (id, selected) => {
     handleChangeSelection(id, selected)
   }
-
+  const changeCity = e => {
+    searchCity(e.target.value)
+  }
+  //   {cities.filter(city =>city.name.includes(value) map(city => (
   return (
     <>
       <CityListContainer>
-        <FilterDiv></FilterDiv>
+        <FilterDiv>
+          <input type="text" onChange={changeCity} />
+        </FilterDiv>
         <TotalDiv>
           <label className="container">
-            <Check
-              type="checkbox"
-              value={allSelected}
-              onChange={handleChange}
-            />
+            <Check type="checkbox" onChange={handleTotalChange} />
             <span className="checkmark"></span>
           </label>
           <h4> {total}items</h4>
@@ -31,8 +38,8 @@ const CityList = ({ cities, total, handleChangeSelection }) => {
             id={city.id}
             name={city.name}
             chineseName={city.chineseName}
-            allSelected={allSelected}
             onHandleChange={handleSelection}
+            checked={city.checked}
           />
         ))}
       </CityListContainer>
