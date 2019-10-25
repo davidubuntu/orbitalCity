@@ -15,6 +15,7 @@ export const TopDiv = styled.div`
   align-items: center;
   height: 40px;
   border: 1px solid #e0e0e0;
+  border-left: 0;
 `
 export const TotalDiv = styled.div`
   height: 40px;

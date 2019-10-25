@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.li`
   height: 100px;
   display: flex;
   align-items: center;
@@ -9,8 +9,8 @@ export const CardContainer = styled.div`
   }
   .icon-delete {
     color: #6f6f6f;
-    font-size: 2em;
     margin-left: auto;
+    font-size: 1.5em;
   }
 
   /* Checkbox styles */
@@ -105,10 +105,8 @@ export const Image = styled.img`
   transition: all 0.1s ease-in-out;
   border-radius: 3px 0 0 3px;
   &:hover {
-    opacity: 0.7;
-    transform: scale(1.03);
-    box-shadow: 5px 10px 18px rgb(255, 8, 120);
-    background: #ffebf2;
+    opacity: 0.5;
+    transform: scale(1.05);
   }
   transition: all 0.1s ease-in-out;
   border-radius: 3px 0 0 3px;

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Title = styled.span`
-  font-size: 2em;
+  font-size: 1.5em;
 `
 export const HomeContainer = styled.h1`
   display: flex;

@@ -7,6 +7,7 @@ import { CitiesContainer, Title } from "./style.js"
 const Cities = () => {
   const [cities, setCities] = useState([])
   const [citySearch, setCitySearch] = useState("")
+  const [allChecked, setAllChecked] = useState(false)
 
   useEffect(() => {
     const newCities = citiesService.cities.map(city => ({
@@ -22,6 +23,7 @@ const Cities = () => {
       checked: checkAll
     }))
     setCities(newCities)
+    setAllChecked(checkAll)
   }
 
   const editSelection = (id, checked) => {
@@ -79,7 +81,10 @@ const Cities = () => {
       checked: false
     }))
     setCities(newCities)
+    setAllChecked(false)
   }
+
+  console.log(cities, filteredCites)
   return (
     <div>
       <Title>Cities of China</Title>
@@ -92,6 +97,7 @@ const Cities = () => {
               handleChangeSelection={handleChangeSelection}
               selectAll={checkAllTrue}
               searchCity={searchCity}
+              allChecked={allChecked}
             />
             <CityListSelected
               cities={filteredCites}

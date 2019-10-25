@@ -17,6 +17,7 @@ const CityList = ({
   total,
   handleChangeSelection,
   selectAll,
+  allChecked,
   searchCity
 }) => {
   const handleTotalChange = e => {
@@ -29,7 +30,7 @@ const CityList = ({
   const changeCity = e => {
     searchCity(e.target.value)
   }
-
+  console.log(cities)
   return (
     <>
       <CityListContainer>
@@ -45,22 +46,28 @@ const CityList = ({
         </FilterDiv>
         <TotalDiv className="padd">
           <label className="container">
-            <Check type="checkbox" onChange={handleTotalChange} />
+            <Check
+              type="checkbox"
+              checked={allChecked}
+              onChange={handleTotalChange}
+            />
             <span className="checkmark"></span>
           </label>
           <Items> {total}items</Items>
         </TotalDiv>
-        <CitiesListScroll>
-          {cities.map(city => (
-            <CityCard
-              key={city.id}
-              id={city.id}
-              name={city.name}
-              chineseName={city.chineseName}
-              onHandleChange={handleSelection}
-              checked={city.checked}
-            />
-          ))}
+        <CitiesListScroll className="list">
+          {cities.map(city => {
+            return (
+              <CityCard
+                key={city.id}
+                id={city.id}
+                name={city.name}
+                chineseName={city.chineseName}
+                onHandleChange={handleSelection}
+                checked={city.checked}
+              />
+            )
+          })}
         </CitiesListScroll>
       </CityListContainer>
     </>
