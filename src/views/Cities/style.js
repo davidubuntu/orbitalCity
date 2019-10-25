@@ -10,5 +10,7 @@ export const CitiesContainer = styled.div`
   }
 `
 export const Title = styled.span`
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-left: 2em;
+  display: flex;
 `

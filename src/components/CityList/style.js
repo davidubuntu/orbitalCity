@@ -11,7 +11,7 @@ export const CityListContainer = styled.div`
   }
 `
 export const TotalDiv = styled.div`
-  height: 40px;
+  height: 38px;
   border: 1px solid #e0e0e0;
   border-right: 0;
   display: flex;
@@ -94,6 +94,7 @@ export const FilterDiv = styled.div`
 
 export const Check = styled.input``
 export const SearchCityInput = styled.input`
+  font-size: 16px;
   padding-left: 2em;
   :focus {
     outline: none;
@@ -103,13 +104,13 @@ export const SearchCityInput = styled.input`
   border-bottom: 1px solid #6f6f6f;
 `
 export const SearchContainer = styled.div`
-  font-size: 15px;
+  font-size: 16px;
   color: #6f6f6f;
   display: flex;
   width: 100%;
   .icon-search {
     border-bottom: 1px solid #6f6f6f;
-    font-size: 15px;
+    font-size: 20px;
   }
 `
 
@@ -120,6 +121,6 @@ export const Items = styled.span`
 `
 
 export const CitiesListScroll = styled.div`
-  height: calc(100vh - 285px);
+  height: calc(100vh - 236px);
   overflow: scroll;
 `

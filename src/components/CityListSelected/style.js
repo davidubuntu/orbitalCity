@@ -35,13 +35,16 @@ export const Title = styled.h4`
 
 export const Check = styled.input``
 
-export const ClearButton = styled.a``
+export const ClearButton = styled.a`
+  color: #2196f3;
+  font-weight: 500;
+`
 export const ItemsNumber = styled.span`
   margin: 0px 30px;
   color: #7b7b7b;
   font-weight: 500;
 `
 export const CitiesListScroll = styled.div`
-  height: calc(100vh - 178px);
+  height: calc(100vh - 164px);
   overflow: scroll;
 `

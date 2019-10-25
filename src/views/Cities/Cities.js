@@ -8,6 +8,7 @@ const Cities = () => {
   const [cities, setCities] = useState([])
   const [citySearch, setCitySearch] = useState("")
   const [allChecked, setAllChecked] = useState(false)
+  //   const [loadMore, setLoadMore] = useState(true)
 
   useEffect(() => {
     const newCities = citiesService.cities.map(city => ({
@@ -16,6 +17,42 @@ const Cities = () => {
     }))
     setCities(newCities)
   }, [])
+
+  /*   useEffect(() => {
+    const getCitiesData = load => {
+      if (load) {
+        const citiesOriginal = citiesService.cities.map(city => ({
+          ...city,
+          checked: false
+        }))
+        const newCitiesScroll = citiesOriginal.slice(
+          cities.lenght,
+          cities.length + 20
+        )
+        setCities([...cities, ...newCitiesScroll])
+      }
+    }
+    getCitiesData(loadMore)
+    setLoadMore(false)
+  }, [cities, loadMore])
+
+  useEffect(() => {
+    const list = document.getElementsByClassName("list")[0]
+    // list has fixed height
+    list.addEventListener("scroll", e => {
+      const el = e.target
+      if (el.scrollTop + el.clientHeight === el.scrollHeight) {
+        setLoadMore(true)
+      }
+    })
+  }, [])
+  useEffect(() => {
+    const list = document.getElementsByClassName("list")[0]
+
+    if (list.clientHeight <= window.innerHeight && list.clientHeight) {
+      setLoadMore(true)
+    }
+  }, [cities]) */
 
   const checkAllTrue = checkAll => {
     const newCities = citiesService.cities.map(city => ({

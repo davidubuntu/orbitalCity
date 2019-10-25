@@ -9,7 +9,7 @@ const Home = () => {
         <div>algorithms</div>
         <div>
           that help <span className="with--accent"> you to discover</span>
-          <h3> cities</h3>
+          <div> cities</div>
         </div>
       </HomeContainer>
     </>
