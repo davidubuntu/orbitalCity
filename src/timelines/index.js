@@ -1,4 +1,4 @@
-import { TimelineMax as Timeline, Power1 } from "gsap"
+import { TimelineMax as Timeline, Power2 } from "gsap"
 
 const getDefaultTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true })
@@ -10,13 +10,13 @@ const getDefaultTimeline = (node, delay) => {
       display: "none",
       autoAlpha: 0,
       delay,
-      ease: Power1.easeIn
+      ease: Power2.easeIn
     })
-    .from(content, 0.15, { autoAlpha: 0, y: 25, ease: Power1.easeInOut })
+    .from(content, 0.15, { autoAlpha: 0, y: 25, ease: Power2.easeInOut })
     .from(contentInner, 0.15, {
       autoAlpha: 0,
       delay: 0.15,
-      ease: Power1.easeIn
+      ease: Power2.easeIn
     })
 
   return timeline
@@ -31,7 +31,7 @@ const getHomeTimeline = (node, delay) => {
     .staggerFrom(
       texts,
       0.375,
-      { autoAlpha: 0, x: -25, ease: Power1.easeOut },
+      { autoAlpha: 0, x: -25, ease: Power2.easeOut },
       0.125
     )
 
@@ -54,6 +54,6 @@ export const play = (pathname, node, appears) => {
 export const exit = node => {
   const timeline = new Timeline({ paused: true })
 
-  timeline.to(node, 0.15, { autoAlpha: 0, ease: Power1.easeOut })
+  timeline.to(node, 0.15, { autoAlpha: 0, ease: Power2.easeOut })
   timeline.play()
 }

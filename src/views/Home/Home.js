@@ -2,17 +2,17 @@ import React from "react"
 import { HomeContainer, Title } from "./style.js"
 const Home = () => {
   return (
-    <>
+    <div>
       <HomeContainer>
         <Title>OrbitalCity</Title>
-        <div className="with--accent">Powerfull </div>
+        <div className="yellow">Powerfull </div>
         <div>algorithms</div>
         <div>
-          that help <span className="with--accent"> you to discover</span>
+          that help <span className="yellow"> you to discover</span>
           <div> cities</div>
         </div>
       </HomeContainer>
-    </>
+    </div>
   )
 }
 

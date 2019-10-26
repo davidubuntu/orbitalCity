@@ -44,7 +44,7 @@ body {
   }
 }
 
-.with--accent {
+.yellow {
   color: #f5c453;
   font-weight: 400;
 }
@@ -53,10 +53,4 @@ body {
   .content--inner {
     padding: 1em;
   }
-}
-
-.content--excerpt {
-  font-weight: 700;
-  font-style: italic;
-  margin: 0;
 }
