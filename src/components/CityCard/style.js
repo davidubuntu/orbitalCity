@@ -39,7 +39,7 @@ export const CardContainer = styled.li`
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 0;
+    top: -8px !important;
     left: 0;
     height: 25px;
     width: 25px;

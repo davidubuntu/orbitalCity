@@ -95,6 +95,11 @@ export const FilterDiv = styled.div`
 export const Check = styled.input``
 export const SearchCityInput = styled.input`
   font-size: 16px;
+  font-family: "Rubik-Bold";
+  ::placeholder {
+    color: #a9a7a7;
+  }
+
   padding-left: 2em;
   :focus {
     outline: none;
@@ -117,7 +122,7 @@ export const SearchContainer = styled.div`
 export const Items = styled.span`
   margin: 0px 65px;
   color: #7b7b7b;
-  font-weight: 500;
+  font-family: "Rubik-Bold";
 `
 
 export const CitiesListScroll = styled.div`

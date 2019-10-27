@@ -36,13 +36,13 @@ export const Title = styled.h4`
 export const Check = styled.input``
 
 export const ClearButton = styled.a`
+  font-family: "Rubik-Bold";
   color: #2196f3;
-  font-weight: 500;
 `
 export const ItemsNumber = styled.span`
+  font-family: "Rubik-Bold";
   margin: 0px 30px;
-  color: #7b7b7b;
-  font-weight: 500;
+  color: #a9a7a7;
 `
 export const CitiesListScroll = styled.div`
   height: calc(100vh - 164px);
