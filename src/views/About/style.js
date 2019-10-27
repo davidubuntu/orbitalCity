@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const Title = styled.span`
   font-size: 1.1em;
   font-weight: 700;
-  font-style: italic;
 `
 export const Text1 = styled.span`
   font-size: 0.8em;

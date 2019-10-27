@@ -15,8 +15,7 @@ const About = () => {
               the logic to render both lists required
             </Text2>
             <Text3 className="yellow">
-              The are three main views and the city view is the one containing
-              the logic to render both lists required
+              Web is styled with react componentes
             </Text3>
           </TextContainer>
         </div>

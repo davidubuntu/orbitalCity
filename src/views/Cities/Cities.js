@@ -3,11 +3,11 @@ import citiesService from "../../api/citiesService"
 import CityList from "../../components/CityList/CityList"
 import CityListSelected from "../../components/CityListSelected/CityListSelected"
 import { CitiesContainer, Title } from "./style.js"
-
 const Cities = () => {
   const [cities, setCities] = useState([])
   const [citySearch, setCitySearch] = useState("")
   const [allChecked, setAllChecked] = useState(false)
+
   //   const [loadMore, setLoadMore] = useState(true)
 
   useEffect(() => {
@@ -17,24 +17,19 @@ const Cities = () => {
     }))
     setCities(newCities)
   }, [])
-
-  /*   useEffect(() => {
-    const getCitiesData = load => {
-      if (load) {
-        const citiesOriginal = citiesService.cities.map(city => ({
-          ...city,
-          checked: false
-        }))
-        const newCitiesScroll = citiesOriginal.slice(
-          cities.lenght,
-          cities.length + 20
-        )
-        setCities([...cities, ...newCitiesScroll])
-      }
+  /*   const getCitiesData = load => {
+    if (load) {
+      const newCitiesScroll = citiesService.cities.slice(
+        cities.lenght,
+        cities.length + 20
+      )
+      setCities([...cities, ...newCitiesScroll])
     }
+  }
+  useEffect(() => {
     getCitiesData(loadMore)
     setLoadMore(false)
-  }, [cities, loadMore])
+  }, [cities, getCitiesData, loadMore])
 
   useEffect(() => {
     const list = document.getElementsByClassName("list")[0]
