@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Title = styled.span`
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 700;
 `
 export const Text1 = styled.span`

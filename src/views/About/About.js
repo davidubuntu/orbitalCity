@@ -6,13 +6,17 @@ const About = () => {
       <div className="content">
         <div className="content--inner">
           <TextContainer>
-            <Title> Developed by David Díez</Title>
+            <Title className="yellow"> Developed by David Díez</Title>
+            <Text1>
+              Simple web application that shows a list of cities with the
+              information about their names in Spanish and Chinese.
+            </Text1>
             <Text1 className="yellow">
               The Webb app is created with Javascript and ReactJS
             </Text1>
             <Text2>
-              The are three main views and the city view is the one containing
-              the logic to render both lists required
+              The are three main views and cities view is the one containing the
+              logic to render both cities lists
             </Text2>
             <Text3 className="yellow">
               Web is styled with react componentes

@@ -1,6 +1,6 @@
 # Orbitalcity WEB APP
 
-Simple web application that shows a list of cities with the information about them. User can filter cities as well as select them.
+Simple web application that shows a list of cities with the information about their names in Spanish and Chinese. User can filter cities as well as select them.
 
 ## Technologies and apis
 
@@ -14,11 +14,11 @@ Simple web application that shows a list of cities with the information about th
 ## Decisions
 
 I decided to use create-react-app js application using a simple configuration.
-I separate in single components to achieve the main purpose of the web. For the javascript part there is a main component which owns the state and communicates data model with the UI to render the data changes
+I separate in single components to achieve the main purpose of the web. There is a main component which owns the state and communicates data model with the UI to render the data changes
 
 For styling I used styled components to style the web.
 
-I decided to separate files in views,assets,components and mock api service.
+I decided to separate files in views,components,assets and mock api service.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -27,7 +27,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Web is divided in three parts (each of them is a link in the header navbar):
 
 - Home
-- Js Cities App
+- Cities App
 - About
 
 ## Available Scripts
