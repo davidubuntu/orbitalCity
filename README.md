@@ -14,6 +14,7 @@ Simple web application that shows a list of cities with the information about th
 ## Decisions
 
 I decided to use create-react-app js application using a simple configuration.
+
 I separate in single components to achieve the main purpose of the web. There is a main component which owns the state and communicates data model with the UI to render the data changes
 
 For styling I used styled components to style the web.
